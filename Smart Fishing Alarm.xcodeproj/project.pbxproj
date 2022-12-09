@@ -1,0 +1,741 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0F4763582937EA77009B1A60 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4763572937EA77009B1A60 /* AddViewController.swift */; };
+		0F50E0C5291527BD00A947AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F50E0C4291527BD00A947AC /* AppDelegate.swift */; };
+		0F50E0C7291527BD00A947AC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F50E0C6291527BD00A947AC /* SceneDelegate.swift */; };
+		0F50E0C9291527BD00A947AC /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F50E0C8291527BD00A947AC /* HomeController.swift */; };
+		0F50E0CC291527BD00A947AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F50E0CA291527BD00A947AC /* Main.storyboard */; };
+		0F50E0CE291527D200A947AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F50E0CD291527D200A947AC /* Assets.xcassets */; };
+		0F50E0D1291527D200A947AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F50E0CF291527D200A947AC /* LaunchScreen.storyboard */; };
+		0F50E0DC291527D400A947AC /* Smart_Fishing_AlarmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F50E0DB291527D400A947AC /* Smart_Fishing_AlarmTests.swift */; };
+		0F50E0E6291527D400A947AC /* Smart_Fishing_AlarmUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F50E0E5291527D400A947AC /* Smart_Fishing_AlarmUITests.swift */; };
+		0F50E0E8291527D400A947AC /* Smart_Fishing_AlarmUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F50E0E7291527D400A947AC /* Smart_Fishing_AlarmUITestsLaunchTests.swift */; };
+		0F946310292F82A500FD893C /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F94630F292F82A500FD893C /* AppConstants.swift */; };
+		0F946312292F893000FD893C /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F946311292F892F00FD893C /* HomeViewModel.swift */; };
+		0F946315292F8B8300FD893C /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = 0F946314292F8B8300FD893C /* RxBlocking */; };
+		0F946317292F8B8300FD893C /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 0F946316292F8B8300FD893C /* RxCocoa */; };
+		0F946319292F8B8300FD893C /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 0F946318292F8B8300FD893C /* RxRelay */; };
+		0F94631B292F8B8300FD893C /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 0F94631A292F8B8300FD893C /* RxSwift */; };
+		0F94631D292F8B8300FD893C /* RxTest in Frameworks */ = {isa = PBXBuildFile; productRef = 0F94631C292F8B8300FD893C /* RxTest */; };
+		0F94631F292F8C8300FD893C /* AlarmDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F94631E292F8C8300FD893C /* AlarmDevice.swift */; };
+		0FC7238C294354E200939C50 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 0FC7238B294354E200939C50 /* Swinject */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0F50E0D8291527D400A947AC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0F50E0B9291527BC00A947AC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0F50E0C0291527BC00A947AC;
+			remoteInfo = "Smart Fishing Alarm";
+		};
+		0F50E0E2291527D400A947AC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0F50E0B9291527BC00A947AC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0F50E0C0291527BC00A947AC;
+			remoteInfo = "Smart Fishing Alarm";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0F4763572937EA77009B1A60 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		0F50E0C1291527BD00A947AC /* Smart Fishing Alarm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Smart Fishing Alarm.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F50E0C4291527BD00A947AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0F50E0C6291527BD00A947AC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		0F50E0C8291527BD00A947AC /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
+		0F50E0CB291527BD00A947AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0F50E0CD291527D200A947AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0F50E0D0291527D200A947AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0F50E0D2291527D200A947AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0F50E0D7291527D400A947AC /* Smart Fishing AlarmTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Smart Fishing AlarmTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F50E0DB291527D400A947AC /* Smart_Fishing_AlarmTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Smart_Fishing_AlarmTests.swift; sourceTree = "<group>"; };
+		0F50E0E1291527D400A947AC /* Smart Fishing AlarmUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Smart Fishing AlarmUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F50E0E5291527D400A947AC /* Smart_Fishing_AlarmUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Smart_Fishing_AlarmUITests.swift; sourceTree = "<group>"; };
+		0F50E0E7291527D400A947AC /* Smart_Fishing_AlarmUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Smart_Fishing_AlarmUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		0F94630F292F82A500FD893C /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		0F946311292F892F00FD893C /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		0F94631E292F8C8300FD893C /* AlarmDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmDevice.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0F50E0BE291527BC00A947AC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F94631B292F8B8300FD893C /* RxSwift in Frameworks */,
+				0F946319292F8B8300FD893C /* RxRelay in Frameworks */,
+				0F946317292F8B8300FD893C /* RxCocoa in Frameworks */,
+				0FC7238C294354E200939C50 /* Swinject in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0F50E0D4291527D400A947AC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F94631D292F8B8300FD893C /* RxTest in Frameworks */,
+				0F946315292F8B8300FD893C /* RxBlocking in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0F50E0DE291527D400A947AC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0F50E0B8291527BC00A947AC = {
+			isa = PBXGroup;
+			children = (
+				0F50E0C3291527BD00A947AC /* Smart Fishing Alarm */,
+				0F50E0DA291527D400A947AC /* Smart Fishing AlarmTests */,
+				0F50E0E4291527D400A947AC /* Smart Fishing AlarmUITests */,
+				0F50E0C2291527BD00A947AC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0F50E0C2291527BD00A947AC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0F50E0C1291527BD00A947AC /* Smart Fishing Alarm.app */,
+				0F50E0D7291527D400A947AC /* Smart Fishing AlarmTests.xctest */,
+				0F50E0E1291527D400A947AC /* Smart Fishing AlarmUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0F50E0C3291527BD00A947AC /* Smart Fishing Alarm */ = {
+			isa = PBXGroup;
+			children = (
+				0F94630B292F81D900FD893C /* Model */,
+				0F946309292F81C500FD893C /* View */,
+				0F94630A292F81D500FD893C /* ViewModel */,
+				0F94630D292F825C00FD893C /* Util */,
+				0F94630E292F826600FD893C /* Extensions */,
+				0F50E0C4291527BD00A947AC /* AppDelegate.swift */,
+				0F50E0C6291527BD00A947AC /* SceneDelegate.swift */,
+				0F50E0CA291527BD00A947AC /* Main.storyboard */,
+				0F50E0CD291527D200A947AC /* Assets.xcassets */,
+				0F50E0CF291527D200A947AC /* LaunchScreen.storyboard */,
+				0F50E0D2291527D200A947AC /* Info.plist */,
+			);
+			path = "Smart Fishing Alarm";
+			sourceTree = "<group>";
+		};
+		0F50E0DA291527D400A947AC /* Smart Fishing AlarmTests */ = {
+			isa = PBXGroup;
+			children = (
+				0F50E0DB291527D400A947AC /* Smart_Fishing_AlarmTests.swift */,
+			);
+			path = "Smart Fishing AlarmTests";
+			sourceTree = "<group>";
+		};
+		0F50E0E4291527D400A947AC /* Smart Fishing AlarmUITests */ = {
+			isa = PBXGroup;
+			children = (
+				0F50E0E5291527D400A947AC /* Smart_Fishing_AlarmUITests.swift */,
+				0F50E0E7291527D400A947AC /* Smart_Fishing_AlarmUITestsLaunchTests.swift */,
+			);
+			path = "Smart Fishing AlarmUITests";
+			sourceTree = "<group>";
+		};
+		0F946309292F81C500FD893C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0F50E0C8291527BD00A947AC /* HomeController.swift */,
+				0F4763572937EA77009B1A60 /* AddViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0F94630A292F81D500FD893C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				0F946311292F892F00FD893C /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0F94630B292F81D900FD893C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0F94631E292F8C8300FD893C /* AlarmDevice.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0F94630D292F825C00FD893C /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				0F94630F292F82A500FD893C /* AppConstants.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		0F94630E292F826600FD893C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0F50E0C0291527BC00A947AC /* Smart Fishing Alarm */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0F50E0EB291527D400A947AC /* Build configuration list for PBXNativeTarget "Smart Fishing Alarm" */;
+			buildPhases = (
+				0F50E0BD291527BC00A947AC /* Sources */,
+				0F50E0BE291527BC00A947AC /* Frameworks */,
+				0F50E0BF291527BC00A947AC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Smart Fishing Alarm";
+			packageProductDependencies = (
+				0F946316292F8B8300FD893C /* RxCocoa */,
+				0F946318292F8B8300FD893C /* RxRelay */,
+				0F94631A292F8B8300FD893C /* RxSwift */,
+				0FC7238B294354E200939C50 /* Swinject */,
+			);
+			productName = "Smart Fishing Alarm";
+			productReference = 0F50E0C1291527BD00A947AC /* Smart Fishing Alarm.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0F50E0D6291527D400A947AC /* Smart Fishing AlarmTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0F50E0EE291527D400A947AC /* Build configuration list for PBXNativeTarget "Smart Fishing AlarmTests" */;
+			buildPhases = (
+				0F50E0D3291527D400A947AC /* Sources */,
+				0F50E0D4291527D400A947AC /* Frameworks */,
+				0F50E0D5291527D400A947AC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0F50E0D9291527D400A947AC /* PBXTargetDependency */,
+			);
+			name = "Smart Fishing AlarmTests";
+			packageProductDependencies = (
+				0F946314292F8B8300FD893C /* RxBlocking */,
+				0F94631C292F8B8300FD893C /* RxTest */,
+			);
+			productName = "Smart Fishing AlarmTests";
+			productReference = 0F50E0D7291527D400A947AC /* Smart Fishing AlarmTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		0F50E0E0291527D400A947AC /* Smart Fishing AlarmUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0F50E0F1291527D400A947AC /* Build configuration list for PBXNativeTarget "Smart Fishing AlarmUITests" */;
+			buildPhases = (
+				0F50E0DD291527D400A947AC /* Sources */,
+				0F50E0DE291527D400A947AC /* Frameworks */,
+				0F50E0DF291527D400A947AC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0F50E0E3291527D400A947AC /* PBXTargetDependency */,
+			);
+			name = "Smart Fishing AlarmUITests";
+			productName = "Smart Fishing AlarmUITests";
+			productReference = 0F50E0E1291527D400A947AC /* Smart Fishing AlarmUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0F50E0B9291527BC00A947AC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1400;
+				LastUpgradeCheck = 1400;
+				TargetAttributes = {
+					0F50E0C0291527BC00A947AC = {
+						CreatedOnToolsVersion = 14.0;
+					};
+					0F50E0D6291527D400A947AC = {
+						CreatedOnToolsVersion = 14.0;
+						TestTargetID = 0F50E0C0291527BC00A947AC;
+					};
+					0F50E0E0291527D400A947AC = {
+						CreatedOnToolsVersion = 14.0;
+						TestTargetID = 0F50E0C0291527BC00A947AC;
+					};
+				};
+			};
+			buildConfigurationList = 0F50E0BC291527BC00A947AC /* Build configuration list for PBXProject "Smart Fishing Alarm" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0F50E0B8291527BC00A947AC;
+			packageReferences = (
+				0F946313292F8B8200FD893C /* XCRemoteSwiftPackageReference "RxSwift" */,
+				0FC7238A294354E200939C50 /* XCRemoteSwiftPackageReference "Swinject" */,
+			);
+			productRefGroup = 0F50E0C2291527BD00A947AC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0F50E0C0291527BC00A947AC /* Smart Fishing Alarm */,
+				0F50E0D6291527D400A947AC /* Smart Fishing AlarmTests */,
+				0F50E0E0291527D400A947AC /* Smart Fishing AlarmUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0F50E0BF291527BC00A947AC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F50E0D1291527D200A947AC /* LaunchScreen.storyboard in Resources */,
+				0F50E0CE291527D200A947AC /* Assets.xcassets in Resources */,
+				0F50E0CC291527BD00A947AC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0F50E0D5291527D400A947AC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0F50E0DF291527D400A947AC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0F50E0BD291527BC00A947AC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F94631F292F8C8300FD893C /* AlarmDevice.swift in Sources */,
+				0F50E0C9291527BD00A947AC /* HomeController.swift in Sources */,
+				0F4763582937EA77009B1A60 /* AddViewController.swift in Sources */,
+				0F50E0C5291527BD00A947AC /* AppDelegate.swift in Sources */,
+				0F50E0C7291527BD00A947AC /* SceneDelegate.swift in Sources */,
+				0F946312292F893000FD893C /* HomeViewModel.swift in Sources */,
+				0F946310292F82A500FD893C /* AppConstants.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0F50E0D3291527D400A947AC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F50E0DC291527D400A947AC /* Smart_Fishing_AlarmTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0F50E0DD291527D400A947AC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F50E0E6291527D400A947AC /* Smart_Fishing_AlarmUITests.swift in Sources */,
+				0F50E0E8291527D400A947AC /* Smart_Fishing_AlarmUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0F50E0D9291527D400A947AC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0F50E0C0291527BC00A947AC /* Smart Fishing Alarm */;
+			targetProxy = 0F50E0D8291527D400A947AC /* PBXContainerItemProxy */;
+		};
+		0F50E0E3291527D400A947AC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0F50E0C0291527BC00A947AC /* Smart Fishing Alarm */;
+			targetProxy = 0F50E0E2291527D400A947AC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0F50E0CA291527BD00A947AC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0F50E0CB291527BD00A947AC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		0F50E0CF291527D200A947AC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0F50E0D0291527D200A947AC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0F50E0E9291527D400A947AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		0F50E0EA291527D400A947AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0F50E0EC291527D400A947AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UMLAGLZ8L9;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Smart Fishing Alarm/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.morvai.Smart-Fishing-Alarm";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0F50E0ED291527D400A947AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UMLAGLZ8L9;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Smart Fishing Alarm/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.morvai.Smart-Fishing-Alarm";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		0F50E0EF291527D400A947AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UMLAGLZ8L9;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.morvai.Smart-Fishing-AlarmTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Smart Fishing Alarm.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Smart Fishing Alarm";
+			};
+			name = Debug;
+		};
+		0F50E0F0291527D400A947AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UMLAGLZ8L9;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.morvai.Smart-Fishing-AlarmTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Smart Fishing Alarm.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Smart Fishing Alarm";
+			};
+			name = Release;
+		};
+		0F50E0F2291527D400A947AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UMLAGLZ8L9;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.morvai.Smart-Fishing-AlarmUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Smart Fishing Alarm";
+			};
+			name = Debug;
+		};
+		0F50E0F3291527D400A947AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UMLAGLZ8L9;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.morvai.Smart-Fishing-AlarmUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Smart Fishing Alarm";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0F50E0BC291527BC00A947AC /* Build configuration list for PBXProject "Smart Fishing Alarm" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0F50E0E9291527D400A947AC /* Debug */,
+				0F50E0EA291527D400A947AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0F50E0EB291527D400A947AC /* Build configuration list for PBXNativeTarget "Smart Fishing Alarm" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0F50E0EC291527D400A947AC /* Debug */,
+				0F50E0ED291527D400A947AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0F50E0EE291527D400A947AC /* Build configuration list for PBXNativeTarget "Smart Fishing AlarmTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0F50E0EF291527D400A947AC /* Debug */,
+				0F50E0F0291527D400A947AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0F50E0F1291527D400A947AC /* Build configuration list for PBXNativeTarget "Smart Fishing AlarmUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0F50E0F2291527D400A947AC /* Debug */,
+				0F50E0F3291527D400A947AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0F946313292F8B8200FD893C /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+		0FC7238A294354E200939C50 /* XCRemoteSwiftPackageReference "Swinject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/Swinject";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 2.8.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0F946314292F8B8300FD893C /* RxBlocking */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0F946313292F8B8200FD893C /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxBlocking;
+		};
+		0F946316292F8B8300FD893C /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0F946313292F8B8200FD893C /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		0F946318292F8B8300FD893C /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0F946313292F8B8200FD893C /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		0F94631A292F8B8300FD893C /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0F946313292F8B8200FD893C /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		0F94631C292F8B8300FD893C /* RxTest */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0F946313292F8B8200FD893C /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxTest;
+		};
+		0FC7238B294354E200939C50 /* Swinject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0FC7238A294354E200939C50 /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 0F50E0B9291527BC00A947AC /* Project object */;
+}
