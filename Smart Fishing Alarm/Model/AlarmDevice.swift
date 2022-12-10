@@ -8,10 +8,18 @@
 import CoreBluetooth
 import Foundation
 
-struct AlarmDevice {
+struct AlarmDevice: Codable {
     let name: String
     let rssi: Int
-    let peripheral: CBPeripheral
+    let peripheralId: String
+    
+    var peripheral: CBPeripheral? = nil
     var rxCharacteristics: CBCharacteristic? = nil
     var txCharacteristics: CBCharacteristic? = nil
+    
+    private enum CodingKeys: CodingKey {
+        case name
+        case rssi
+        case peripheralId
+    }
 }

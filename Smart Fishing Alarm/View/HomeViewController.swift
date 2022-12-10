@@ -43,5 +43,21 @@ class HomeViewController: UIViewController {
             .bind(to: tableView.rx.items(cellIdentifier: "DeviceCell")) { (row, alarmDevice, cell) in
                 cell.textLabel?.text = alarmDevice.name
             }.disposed(by: disposeBag)
+        
+        tableView.rx.modelSelected(AlarmDevice.self)
+            .subscribe(onNext: showMessageAlert)
+            .disposed(by: disposeBag)
+    }
+    
+    func showMessageAlert(alarmDevice: AlarmDevice) {
+        let ac = UIAlertController(title: "Send message", message: "Type the message you want to send!", preferredStyle: .alert)
+        ac.addTextField()
+        ac.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+        ac.addAction(UIAlertAction(title: "Send", style: .default) { [weak ac, weak self] _ in
+            if let message = ac?.textFields?[0].text, !message.isEmpty {
+                self?.viewModel.sendMessage(to: alarmDevice, message: message)
+            }
+        })
+        present(ac, animated: true)
     }
 }

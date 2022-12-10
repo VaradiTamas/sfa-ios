@@ -30,6 +30,10 @@ final class Injection {
             return BluetoothServiceImpl()
         }
         .inObjectScope(.container)
+        container.register(NotificationService.self) { _ in
+            return NotificationServiceImpl()
+        }
+        
         return container
     }
 }

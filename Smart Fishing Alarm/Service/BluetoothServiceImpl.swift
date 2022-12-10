@@ -23,12 +23,25 @@ class BluetoothServiceImpl: NSObject, BluetoothService {
         }
     }
     
+    private var previousAlarmDevices = [AlarmDevice]() {
+        didSet {
+            if let json = try? JSONEncoder().encode(previousAlarmDevices) {
+                UserDefaults.standard.set(json, forKey: AppConstants.PREVIOUSLY_CONNECTED_DEVICES_KEY)
+            } else {
+                print("Encoding previousAlarmDevices failed")
+            }
+        }
+    }
+    
     let availableAlarmDevicesSubject = PublishSubject<[AlarmDevice]>()
     let connectedAlarmDevicesSubject = PublishSubject<[AlarmDevice]>()
+    let alarmMessages = PublishSubject<AlarmMessage>()
     
     override init() {
         super.init()
         centralManager = CBCentralManager(delegate: self, queue: nil)
+        
+        loadPreviousDevices()
     }
     
     func startScanning() {
@@ -45,10 +58,22 @@ class BluetoothServiceImpl: NSObject, BluetoothService {
     }
     
     func connectTo(alarmDevice: AlarmDevice) {
-        if !connectedAlarmDevices.contains(where: { $0.peripheral.identifier == alarmDevice.peripheral.identifier }) {
-            alarmDevice.peripheral.delegate = self
-            centralManager.connect(alarmDevice.peripheral, options: nil)
+        guard let peripheral = alarmDevice.peripheral else { return }
+        centralManager.connect(peripheral, options: nil)
+    }
+    
+    func writeOutgoing(message: String, to peripheral: CBPeripheral, with txCharacteristic: CBCharacteristic) {
+        guard let data = try? JSONEncoder().encode(message) else { return }
+        peripheral.writeValue(data, for: txCharacteristic, type: .withResponse)
+    }
+    
+    private func loadPreviousDevices() {
+        guard let userDefaultsJson = UserDefaults.standard.data(forKey: AppConstants.PREVIOUSLY_CONNECTED_DEVICES_KEY),
+              let alarmDevices = try? JSONDecoder().decode([AlarmDevice].self, from: userDefaultsJson) else {
+                  print("Could not read previous connections from UserDefaults")
+                  return
         }
+        previousAlarmDevices = alarmDevices
     }
 }
 
@@ -59,7 +84,7 @@ extension BluetoothServiceImpl: CBCentralManagerDelegate {
                 print("Is Powered Off.")
             case .poweredOn:
                 print("Is Powered On.")
-                //                startScanning()
+                startScanning()
             case .unsupported:
                 print("Is Unsupported.")
             case .unauthorized:
@@ -81,15 +106,24 @@ extension BluetoothServiceImpl: CBCentralManagerDelegate {
         
         if !availableAlarmDevices.contains(where: { $0.rssi == RSSI.intValue }) {
             availableAlarmDevices.append(
-                AlarmDevice(name: peripheral.name ?? "Unknown name", rssi: RSSI.intValue, peripheral: peripheral))
+                AlarmDevice(name: peripheral.name ?? "Unknown name", rssi: RSSI.intValue, peripheralId: peripheral.identifier.uuidString, peripheral: peripheral)
+            )
+            if previousAlarmDevices.contains(where: { $0.peripheralId == peripheral.identifier.uuidString }) {
+                centralManager.connect(peripheral, options: nil)
+            }
         }
     }
     
     func centralManager(_ central: CBCentralManager, didConnect peripheral: CBPeripheral) {
         print("Didconnect: \(peripheral.identifier)")
-        peripheral.delegate = self
-        guard let alarmDevice = availableAlarmDevices.first(where: { $0.peripheral.identifier == peripheral.identifier }) else { return }
+        guard let alarmDevice = availableAlarmDevices.first(where: { $0.peripheralId == peripheral.identifier.uuidString }) else { return }
         connectedAlarmDevices.append(alarmDevice)
+        availableAlarmDevices.removeAll { $0.peripheralId == alarmDevice.peripheralId }
+        if !previousAlarmDevices.contains(where: { $0.peripheralId == alarmDevice.peripheralId }) {
+            previousAlarmDevices.append(alarmDevice)
+        }
+                
+        peripheral.delegate = self
         peripheral.discoverServices(nil)
     }
 }
@@ -115,11 +149,11 @@ extension BluetoothServiceImpl: CBPeripheralDelegate {
             print("No characteristics for: \(peripheral.identifier)")
             return
         }
-        guard var connectedAlarmDevice = connectedAlarmDevices.first(where: { $0.peripheral.identifier == peripheral.identifier }) else { return }
+        guard var connectedAlarmDevice = connectedAlarmDevices.first(where: { $0.peripheralId == peripheral.identifier.uuidString }) else { return }
         
         for characteristic in characteristics {
             if characteristic.properties.contains(.read) || characteristic.properties.contains(.notify) {
-                //                connectedAlarmDevices.first(where: { $0.peripheral.identifier == peripheral.identifier })?.rxCharacteristics = characteristic
+                connectedAlarmDevice.rxCharacteristics = characteristic
                 peripheral.setNotifyValue(true, for: characteristic)
             }
             if characteristic.properties.contains(.write) {
@@ -129,11 +163,11 @@ extension BluetoothServiceImpl: CBPeripheralDelegate {
     }
     
     func peripheral(_ peripheral: CBPeripheral, didUpdateValueFor characteristic: CBCharacteristic, error: Error?) {
-        guard connectedAlarmDevices.contains(where: { $0.peripheral.identifier == peripheral.identifier }),
+        guard connectedAlarmDevices.contains(where: { $0.peripheralId == peripheral.identifier.uuidString }),
               let characteristicValue = characteristic.value,
               let stringValue = String(data: characteristicValue, encoding: .utf8) else { return }
         
-        print("Value Recieved: \(stringValue) from \(peripheral.identifier)")
+        alarmMessages.onNext(AlarmMessage(peripheral: peripheral, message: stringValue))
     }
 }
 
