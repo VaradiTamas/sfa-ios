@@ -26,6 +26,10 @@
 		0F94631D292F8B8300FD893C /* RxTest in Frameworks */ = {isa = PBXBuildFile; productRef = 0F94631C292F8B8300FD893C /* RxTest */; };
 		0F94631F292F8C8300FD893C /* AlarmDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F94631E292F8C8300FD893C /* AlarmDevice.swift */; };
 		0FC7238C294354E200939C50 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 0FC7238B294354E200939C50 /* Swinject */; };
+		0FC7238F294363A500939C50 /* BluetoothServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC7238E294363A500939C50 /* BluetoothServiceImpl.swift */; };
+		0FC723912943724500939C50 /* Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC723902943724500939C50 /* Injection.swift */; };
+		0FC723932943730900939C50 /* BluetoothService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC723922943730900939C50 /* BluetoothService.swift */; };
+		0FC72396294374F500939C50 /* Injected.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC72395294374F500939C50 /* Injected.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +67,10 @@
 		0F94630F292F82A500FD893C /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		0F946311292F892F00FD893C /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		0F94631E292F8C8300FD893C /* AlarmDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmDevice.swift; sourceTree = "<group>"; };
+		0FC7238E294363A500939C50 /* BluetoothServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothServiceImpl.swift; sourceTree = "<group>"; };
+		0FC723902943724500939C50 /* Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injection.swift; sourceTree = "<group>"; };
+		0FC723922943730900939C50 /* BluetoothService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothService.swift; sourceTree = "<group>"; };
+		0FC72395294374F500939C50 /* Injected.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injected.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,11 +127,11 @@
 		0F50E0C3291527BD00A947AC /* Smart Fishing Alarm */ = {
 			isa = PBXGroup;
 			children = (
+				0FC7238D2943638700939C50 /* Service */,
 				0F94630B292F81D900FD893C /* Model */,
 				0F946309292F81C500FD893C /* View */,
 				0F94630A292F81D500FD893C /* ViewModel */,
 				0F94630D292F825C00FD893C /* Util */,
-				0F94630E292F826600FD893C /* Extensions */,
 				0F50E0C4291527BD00A947AC /* AppDelegate.swift */,
 				0F50E0C6291527BD00A947AC /* SceneDelegate.swift */,
 				0F50E0CA291527BD00A947AC /* Main.storyboard */,
@@ -179,7 +187,10 @@
 		0F94630D292F825C00FD893C /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				0FC72394294374B000939C50 /* Property Wrappers */,
+				0F94630E292F826600FD893C /* Extensions */,
 				0F94630F292F82A500FD893C /* AppConstants.swift */,
+				0FC723902943724500939C50 /* Injection.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -189,6 +200,23 @@
 			children = (
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		0FC7238D2943638700939C50 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				0FC7238E294363A500939C50 /* BluetoothServiceImpl.swift */,
+				0FC723922943730900939C50 /* BluetoothService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		0FC72394294374B000939C50 /* Property Wrappers */ = {
+			isa = PBXGroup;
+			children = (
+				0FC72395294374F500939C50 /* Injected.swift */,
+			);
+			path = "Property Wrappers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -336,11 +364,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FC7238F294363A500939C50 /* BluetoothServiceImpl.swift in Sources */,
 				0F94631F292F8C8300FD893C /* AlarmDevice.swift in Sources */,
 				0F50E0C9291527BD00A947AC /* HomeController.swift in Sources */,
+				0FC72396294374F500939C50 /* Injected.swift in Sources */,
 				0F4763582937EA77009B1A60 /* AddViewController.swift in Sources */,
+				0FC723932943730900939C50 /* BluetoothService.swift in Sources */,
 				0F50E0C5291527BD00A947AC /* AppDelegate.swift in Sources */,
 				0F50E0C7291527BD00A947AC /* SceneDelegate.swift in Sources */,
+				0FC723912943724500939C50 /* Injection.swift in Sources */,
 				0F946312292F893000FD893C /* HomeViewModel.swift in Sources */,
 				0F946310292F82A500FD893C /* AppConstants.swift in Sources */,
 			);

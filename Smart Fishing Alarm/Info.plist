@@ -6,6 +6,10 @@
 	<string>Can this app connect to Bluetooth peripherals?</string>
 	<key>NSBluetoothAlwaysUsageDescription</key>
 	<string>Can this app use Bluetooth?</string>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>bluetooth-central</string>
+	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

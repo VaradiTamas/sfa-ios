@@ -14,6 +14,7 @@ import CoreMotion
 
 class HomeViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
+    
     var viewModel = ViewModel()
     let disposeBag = DisposeBag()
     
@@ -26,33 +27,21 @@ class HomeViewController: UIViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(onAddButtonTapped))
         
         setupBindings()
-        viewModel.startScanning()
     }
     
     @objc func onAddButtonTapped() {
-        <#function body#>
+        guard let vc = storyboard?.instantiateViewController(withIdentifier: "addViewController") as? AddViewController else {
+            fatalError("Viewcontroller not found with ID: addViewController")
+        }
+        present(vc, animated: true)
     }
 
-    
-    @objc func startScanTapped() {
-        if scanning {
-            viewModel.stopScanning()
-        } else {
-            viewModel.startScanning()
-        }
-    }
-    
     func setupBindings() {
         viewModel
-            .availableAlarmDevicesSubject
+            .connectedAlarmDevicesSubject
             .observe(on: MainScheduler.instance)
             .bind(to: tableView.rx.items(cellIdentifier: "DeviceCell")) { (row, alarmDevice, cell) in
                 cell.textLabel?.text = alarmDevice.name
-            }.disposed(by: disposeBag)
-
-        tableView.rx.modelSelected(AlarmDevice.self)
-            .subscribe { [weak self] tappedAlarmDevice in
-                self?.viewModel.connectTo(alarmDevice: tappedAlarmDevice)
             }.disposed(by: disposeBag)
     }
 }
