@@ -41,4 +41,8 @@ class ViewModel {
         
         bluetoothService.writeOutgoing(message: message, to: peripheral, with: txCharacteristic)
     }
+    
+    func removeConnected(alarmDevice: AlarmDevice) {
+        bluetoothService.removeConnected(alarmDevice: alarmDevice)
+    }
 }

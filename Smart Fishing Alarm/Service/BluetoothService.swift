@@ -18,4 +18,5 @@ protocol BluetoothService {
     func stopScanning()
     func connectTo(alarmDevice: AlarmDevice)
     func writeOutgoing(message: String, to peripheral: CBPeripheral, with txCharacteristic: CBCharacteristic)
+    func removeConnected(alarmDevice removableAlarmDevice: AlarmDevice)
 }

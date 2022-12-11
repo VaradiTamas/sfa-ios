@@ -75,6 +75,15 @@ class BluetoothServiceImpl: NSObject, BluetoothService {
         }
         previousAlarmDevices = alarmDevices
     }
+    
+    func removeConnected(alarmDevice removableAlarmDevice: AlarmDevice) {
+        // delete from connected list and autoconnect list
+        connectedAlarmDevices.removeAll { $0.peripheralId == removableAlarmDevice.peripheralId }
+        previousAlarmDevices.removeAll { $0.peripheralId == removableAlarmDevice.peripheralId }
+        // unconnect from device
+        guard let peripheral = removableAlarmDevice.peripheral else { return }
+        centralManager.cancelPeripheralConnection(peripheral)
+    }
 }
 
 extension BluetoothServiceImpl: CBCentralManagerDelegate {
@@ -149,15 +158,15 @@ extension BluetoothServiceImpl: CBPeripheralDelegate {
             print("No characteristics for: \(peripheral.identifier)")
             return
         }
-        guard var connectedAlarmDevice = connectedAlarmDevices.first(where: { $0.peripheralId == peripheral.identifier.uuidString }) else { return }
+        guard let connectedAlarmDeviceIndex = connectedAlarmDevices.firstIndex(where: { $0.peripheralId == peripheral.identifier.uuidString }) else { return }
         
         for characteristic in characteristics {
             if characteristic.properties.contains(.read) || characteristic.properties.contains(.notify) {
-                connectedAlarmDevice.rxCharacteristics = characteristic
+                connectedAlarmDevices[connectedAlarmDeviceIndex].rxCharacteristics = characteristic
                 peripheral.setNotifyValue(true, for: characteristic)
             }
             if characteristic.properties.contains(.write) {
-                connectedAlarmDevice.txCharacteristics = characteristic
+                connectedAlarmDevices[connectedAlarmDeviceIndex].txCharacteristics = characteristic
             }
         }
     }

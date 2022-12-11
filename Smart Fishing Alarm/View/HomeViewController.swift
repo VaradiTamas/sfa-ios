@@ -47,6 +47,10 @@ class HomeViewController: UIViewController {
         tableView.rx.modelSelected(AlarmDevice.self)
             .subscribe(onNext: showMessageAlert)
             .disposed(by: disposeBag)
+        
+        tableView.rx.modelDeleted(AlarmDevice.self)
+            .subscribe(onNext: viewModel.removeConnected)
+            .disposed(by: disposeBag)
     }
     
     func showMessageAlert(alarmDevice: AlarmDevice) {
