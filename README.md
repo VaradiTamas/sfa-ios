@@ -17,3 +17,5 @@ This github project holds the source code for the native IOS application that co
 The **Phase 1** of the project is completed in which the objective was to:
   - find a communcation protocol which is both available in mobiles, uses low energy and have a good range
   - develop a mobile application that can send to and receive information from several microcontrollers
+
+More information about the project: https://github.com/VaradiTamas/sfa-documentation
