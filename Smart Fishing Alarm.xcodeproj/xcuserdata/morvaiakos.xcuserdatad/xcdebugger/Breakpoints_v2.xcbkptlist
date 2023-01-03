@@ -3,4 +3,70 @@
    uuid = "9419D12D-83B4-4F11-B152-660EF3B0AEDD"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6BAC8EB1-D810-4EEC-9FF9-0210FD9A2185"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Smart Fishing Alarm/Service/BluetoothServiceImpl.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
+            landmarkName = "loadPreviousDevices()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DC5FFC15-A47F-4315-B96A-43B6A2974942"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Smart Fishing Alarm/Service/BluetoothServiceImpl.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "131"
+            endingLineNumber = "131"
+            landmarkName = "centralManager(_:didConnect:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "DC5FFC15-A47F-4315-B96A-43B6A2974942 - 90439adcc57a2557"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Smart_Fishing_Alarm.BluetoothServiceImpl.centralManager(_: __C.CBCentralManager, didConnect: __C.CBPeripheral) -&gt; ()"
+                  moduleName = "Smart Fishing Alarm"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/morvaiakos/XCode/Smart%20Fishing%20Alarm/Smart%20Fishing%20Alarm/Service/BluetoothServiceImpl.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "131"
+                  endingLineNumber = "131"
+                  offsetFromSymbolStart = "1332">
+               </Location>
+               <Location
+                  uuid = "DC5FFC15-A47F-4315-B96A-43B6A2974942 - 215e2eb6c2c39279"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #3 (Smart_Fishing_Alarm.AlarmDevice) -&gt; Swift.Bool in Smart_Fishing_Alarm.BluetoothServiceImpl.centralManager(_: __C.CBCentralManager, didConnect: __C.CBPeripheral) -&gt; ()"
+                  moduleName = "Smart Fishing Alarm"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/morvaiakos/XCode/Smart%20Fishing%20Alarm/Smart%20Fishing%20Alarm/Service/BluetoothServiceImpl.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "131"
+                  endingLineNumber = "131"
+                  offsetFromSymbolStart = "44">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

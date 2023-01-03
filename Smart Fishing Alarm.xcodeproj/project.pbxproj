@@ -28,6 +28,7 @@
 		0FAB351A29449B7000316597 /* AlarmMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAB351929449B7000316597 /* AlarmMessage.swift */; };
 		0FAB351C29449E7300316597 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAB351B29449E7300316597 /* NotificationService.swift */; };
 		0FAB351E29449E7F00316597 /* NotificationServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAB351D29449E7F00316597 /* NotificationServiceImpl.swift */; };
+		0FB42D1929645ED6008235DD /* AddViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB42D1829645ED6008235DD /* AddViewModel.swift */; };
 		0FC7238C294354E200939C50 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 0FC7238B294354E200939C50 /* Swinject */; };
 		0FC7238F294363A500939C50 /* BluetoothServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC7238E294363A500939C50 /* BluetoothServiceImpl.swift */; };
 		0FC723912943724500939C50 /* Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC723902943724500939C50 /* Injection.swift */; };
@@ -73,6 +74,7 @@
 		0FAB351929449B7000316597 /* AlarmMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmMessage.swift; sourceTree = "<group>"; };
 		0FAB351B29449E7300316597 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		0FAB351D29449E7F00316597 /* NotificationServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationServiceImpl.swift; sourceTree = "<group>"; };
+		0FB42D1829645ED6008235DD /* AddViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewModel.swift; sourceTree = "<group>"; };
 		0FC7238E294363A500939C50 /* BluetoothServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothServiceImpl.swift; sourceTree = "<group>"; };
 		0FC723902943724500939C50 /* Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injection.swift; sourceTree = "<group>"; };
 		0FC723922943730900939C50 /* BluetoothService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothService.swift; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				0F946311292F892F00FD893C /* HomeViewModel.swift */,
+				0FB42D1829645ED6008235DD /* AddViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -376,6 +379,7 @@
 				0FC7238F294363A500939C50 /* BluetoothServiceImpl.swift in Sources */,
 				0F94631F292F8C8300FD893C /* AlarmDevice.swift in Sources */,
 				0FAB351C29449E7300316597 /* NotificationService.swift in Sources */,
+				0FB42D1929645ED6008235DD /* AddViewModel.swift in Sources */,
 				0F50E0C9291527BD00A947AC /* HomeViewController.swift in Sources */,
 				0FAB351E29449E7F00316597 /* NotificationServiceImpl.swift in Sources */,
 				0FC72396294374F500939C50 /* Injected.swift in Sources */,

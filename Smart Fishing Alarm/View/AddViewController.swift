@@ -10,11 +10,10 @@ import RxSwift
 import RxCocoa
 
 class AddViewController: UIViewController {
-    @Injected private var bluetoothService: BluetoothService
-    
-    let disposeBag = DisposeBag()
-    
     @IBOutlet weak var tableView: UITableView!
+
+    var viewModel = ViewModel()
+    let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +22,7 @@ class AddViewController: UIViewController {
     }
 
     func setupBindings() {
-        bluetoothService
+        viewModel
             .availableAlarmDevicesSubject
             .observe(on: MainScheduler.instance)
             .bind(to: tableView.rx.items(cellIdentifier: "deviceCell")) { (row, alarmDevice, cell) in
@@ -32,12 +31,12 @@ class AddViewController: UIViewController {
         
         tableView.rx.modelSelected(AlarmDevice.self)
             .subscribe { [weak self] tappedAlarmDevice in
-                self?.bluetoothService.connectTo(alarmDevice: tappedAlarmDevice)
+                self?.viewModel.connectTo(alarmDevice: tappedAlarmDevice)
             }.disposed(by: disposeBag)
     }    
     
     @IBAction func scanButtonPressed(_ sender: UIButton) {
-        bluetoothService.startScanning()
+        viewModel.startScanning()
         sender.titleLabel?.text = "Scanning..."
         sender.isEnabled = false
         Timer.scheduledTimer(withTimeInterval: 10, repeats: false) {_ in

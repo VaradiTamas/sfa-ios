@@ -53,6 +53,7 @@ class HomeViewController: UIViewController {
             .disposed(by: disposeBag)
     }
     
+    
     func showMessageAlert(alarmDevice: AlarmDevice) {
         let ac = UIAlertController(title: "Send message", message: "Type the message you want to send!", preferredStyle: .alert)
         ac.addTextField()

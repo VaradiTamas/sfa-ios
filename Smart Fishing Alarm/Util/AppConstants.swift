@@ -14,5 +14,4 @@ struct AppConstants {
     
 //    UserDefaults keys
     static let PREVIOUSLY_CONNECTED_DEVICES_KEY = "previosConnections"
-    
 }
